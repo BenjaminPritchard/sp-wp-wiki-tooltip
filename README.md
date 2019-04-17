@@ -27,9 +27,9 @@ To use this forked plugin,just download this whole thing into:
 
 then go to the config page for this plugin, and add a URL to use:
 
-*Name: Spirit Wiki Article
-*ID  : SW
-*URL : https://spiritwiki.lightningpath.org/api.php
+* Name: Spirit Wiki Article
+* ID  : SW
+* URL : https://spiritwiki.lightningpath.org/api.php
 
 then inside of a page or post in WP, just embed short codes like this:
 
