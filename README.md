@@ -11,13 +11,11 @@ In that case, the new logic in ajax_get_wiki_page() will first call the LP API t
 
 https://lightning-path-api.appspot.com/v1/get_term?q=Development
 
-in that case, the LP API will return:
+in that case, the LP API will return JSON like this:
 
-{
-answer: "The word Ego is used to refer to the the integrated combination of self-consciousness (I), perspective (eye) (individual view/understanding of the world) and will (Sharp, SA1) that leads to the emergence/experience of Self/self. Ego is the conscious experience of self (Sharp, SA1)."
-}
+{ answer: "The word Ego is used to refer to the the integrated combination of self-consciousness (I), perspective (eye) (individual view/understanding of the world) and will (Sharp, SA1) that leads to the emergence/experience of Self/self. Ego is the conscious experience of self (Sharp, SA1)." }
 
-and the definition above will appear in the pop-up. However, if no definition is available, then we will use the logic from the original plug to use the media wiki API to get text from the current mediawiki page.
+and the definition above will appear in the pop-up. However, if no definition is available, then we will use the logic from the original plugin to use the media wiki API to get text from the current mediawiki page.
 
 Definitions from the API are given preference if they are available because for most spirit wiki terms, the original logic in this plugin to create a pop-up from the mediawiki content doesn't work well; this is because of extraneous stuff above the actual definition, such as: 
 
@@ -29,13 +27,13 @@ To use this forked plugin,just download this whole thing into:
 
 then go to the config page for this plugin, and add a URL to use:
 
-Name: Spirit Wiki Article
-UD  : SW
-URL : https://spiritwiki.lightningpath.org/api.php
+*Name: Spirit Wiki Article
+*ID  : SW
+*URL : https://spiritwiki.lightningpath.org/api.php
 
 then inside of a page or post in WP, just embed short codes like this:
 
-[wiki base="SW"]Development[/wiki])
+[wiki base="SW"]Development[/wiki]
 
 
 # TODO
