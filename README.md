@@ -21,13 +21,13 @@ and the definition above will appear in the pop-up. However, if no definition is
 
 Definitions from the API are given preference if they are available because for most spirit wiki terms, the original logic in this plugin to create a pop-up from the mediawiki content doesn't work well; this is because of extraneous stuff above the actual definition, such as: 
 
-{{template:connectionnav}}"
+{{template:connectionnav}}
 
 To use this forked plugin,just download this whole thing into:
 
-\wp-content\plugins\wp-wiki-tooltip
+\wp-content\plugins\sp-wp-wiki-tooltip
 
-then go to the config page for the spirit wiki, and add a URL to use:
+then go to the config page for this plugin, and add a URL to use:
 
 Name: Spirit Wiki Article
 UD  : SW
@@ -36,6 +36,15 @@ URL : https://spiritwiki.lightningpath.org/api.php
 then inside of a page or post in WP, just embed short codes like this:
 
 [wiki base="SW"]Development[/wiki])
+
+
+# TODO
+* Figure out exactly how much of the original plugin (name, etc.) to change, based on "best-practices" for creating a fork. Currently, it still has original name, etc. I don't think we want to incorporate our changes back into original plugin. I think it is better to just use this fork as our starting point for custom work from here on out. 
+* Maybe consider changing logic in do_wiki_shortcode(). if we have a local copy (on the LP server) of the spirit wiki definitions, we can pregenerate all the pop-ups for the spirit wiki terms, which means they will pop straight up on hover, without having to call back to the server at all. What we have works fine for now, but it is slower than it needs to be
+* Figure out how to version what we are doing, etc.
+
+# Fork History
+* Initial version 17-April-2019 by Ben
 
 
 # WP Wiki Tooltip
