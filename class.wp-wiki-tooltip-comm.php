@@ -83,7 +83,8 @@ class WP_Wiki_Tooltip_Comm extends WP_Wiki_Tooltip_Base {
             $term = substr($page_url, strpos($page_url, "index.php")+10);
             if ($term != '' && $term != false) {
                 // query the LP API
-                $url = "https://lightning-path-api.appspot.com/v1/get_term?q=" . $term;
+                //$url = "https://lightning-path-api.appspot.com/v1/get_term?q=" . $term;
+                $url = "https://api.lightningpath.org/v1/get_term.php?term=" . str_replace('_',' ', $term);
                 $response = wp_remote_get($url);
                 if ( is_array( $response ) && ! is_wp_error( $response ) ) {
                     $data = json_decode( $response['body'], true );
