@@ -83,12 +83,22 @@ class WP_Wiki_Tooltip_Comm extends WP_Wiki_Tooltip_Base {
             $term = substr($page_url, strpos($page_url, "index.php")+10);
             if ($term != '' && $term != false) {
                 // query the LP API
-                //$url = "https://lightning-path-api.appspot.com/v1/get_term?q=" . $term;
                 $url = "https://api.lightningpath.org/v1/get_term.php?term=" . str_replace('_',' ', $term);
                 $response = wp_remote_get($url);
                 if ( is_array( $response ) && ! is_wp_error( $response ) ) {
+
+
+                    /* example data from API:
+                    {
+                        version: 1,
+                        status: 1,
+                        definition: "The word Ego is used to refer to the the integrated combination of self-consciousness (I), perspective (eye) (individual view/understanding of the world) and will (Sharp, SA1) that leads to the emergence/experience of Self/self. Ego is the conscious experience of self (Sharp, SA1).",
+                        error_msg: ""
+                    }
+                    */
+
                     $data = json_decode( $response['body'], true );
-                    $answer = $data['answer'];
+                    $answer = $data['definition'];
                     // if we called the web service OK,
                     // and if we got a non-blank answer back, 
                     // then we will return it

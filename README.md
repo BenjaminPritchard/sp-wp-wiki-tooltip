@@ -9,11 +9,17 @@ ajax_get_wiki_page() is what is called from javascript when the user hovers over
 
 In that case, the new logic in ajax_get_wiki_page() will first call the LP API to get the definition:
 
-https://lightning-path-api.appspot.com/v1/get_term?q=Development
+http://api.lightningpath.org/v1/get_term.php?term=Development
+
 
 in that case, the LP API will return JSON like this:
 
-{ answer: "The word Ego is used to refer to the the integrated combination of self-consciousness (I), perspective (eye) (individual view/understanding of the world) and will (Sharp, SA1) that leads to the emergence/experience of Self/self. Ego is the conscious experience of self (Sharp, SA1)." }
+{
+version     : 1,
+status      : 1,
+definition  : "The goal of human development is to create a healthy and fully functioning physical unit capable of seating high levels of Monadic Consciousness. The development process itself is much longer than currently understood, typically extending the entire lifespan.",
+error_msg   : ""
+}
 
 and the definition above will appear in the pop-up. However, if no definition is available, then we will use the logic from the original plugin to use the media wiki API to get text from the current mediawiki page.
 

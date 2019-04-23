@@ -86,7 +86,6 @@ class WP_Wiki_Tooltip extends WP_Wiki_Tooltip_Base {
 			$wiki_base_id = $wiki_urls[ 'data' ][ $std_num ][ 'id' ];
 		}
 
-		
 		$wiki_url = '';
 		foreach( $wiki_urls[ 'data' ] as $num => $wiki_data ) {
 			if( $wiki_data[ 'id' ] == $wiki_base_id ) {
