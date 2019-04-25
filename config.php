@@ -7,8 +7,8 @@ $wp_wiki_tooltip_default_options = array(
         'data' => array (
             '1' => array ( // standard URL of Wiki to get contents from
                 'id' => 'EN',
-                'url' => 'https://en.wikipedia.org/w/api.php',
-                'sitename' => 'Wikipedia'
+                'url' => 'https://spiritwiki.lightningpath.org/w/api.php',
+                'sitename' => 'The SpiritWiki'
             )
         )
     ),
