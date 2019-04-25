@@ -75,7 +75,7 @@ function getLangString( editor, key ) {
                         }
                     ],
                     onsubmit: function (e) { //when the ok button is clicked
-                        var shortcode = '[wiki';
+                        var shortcode = '[spwiki';
 
                         if( typeof e.data.title != 'undefined' && e.data.title != e.data.link )
                             shortcode += ' title="' + e.data.title + '"';
@@ -89,7 +89,7 @@ function getLangString( editor, key ) {
                         if( e.data.thumb != '0' && e.data.thumb != '-' )
                             shortcode += ' thumbnail="' + e.data.thumb + '"';
 
-                        shortcode += ']' + e.data.link + '[/wiki]';
+                        shortcode += ']' + e.data.link + '[/spwiki]';
                         editor.insertContent( shortcode );
                     }
                 });
