@@ -14,6 +14,7 @@ class WP_Wiki_Tooltip extends WP_Wiki_Tooltip_Base {
 		add_action( 'wp_enqueue_scripts', array( $this, 'init' ) );
 		add_action( 'wp_footer', array( $this, 'add_wiki_container' ) );
 		add_shortcode( 'wiki', array( $this, 'do_wiki_shortcode' ) );
+		add_shortcode( 'spwiki', array( $this, 'do_wiki_shortcode' ) );
 
 		$this->options = get_option( 'wp-wiki-tooltip-settings' );
 		if( $this->options == false ) {
