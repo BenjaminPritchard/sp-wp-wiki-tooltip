@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: LP SpiritWiki Tooltip
-Plugin URI: https://kundalinisoftware.com/
-Description: Adds concept definitions from the  <a href="https://spiritwiki.lightningpath.org" target="_blank" rel="noopener noreferrer">MediaWiki</a> installation, e.g. <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">SpiritWiki</a>.
-Version: 1.0.0
+Plugin URI: https://www.benjaminpritchard.org/forking-a-wordpress-plugin/
+Description: Adds concept definitions from the <a href="https://spiritwiki.lightningpath.org">SpiritWiki</a>, or other MediaWiki installation 
+Version: 2.0.0
 Author: Benjamin Prritchard
-Author: Nico Danneberg
+Author URI: https://benjaminpritchard.org
 License: GPLv2 or later
 Text Domain: wp-wiki-tooltip
 */

@@ -1,5 +1,5 @@
 # Fork
-This is a fork of WP Wiki Tool tip, which special support for TheSpiritWiki.com
+This is a fork of WP Wiki Tool tip, which special support for https://spiritwiki.lightningpath.org/index.php/Main_Page
 
 This fork only modifies the function ajax_get_wiki_page() which is in the file class.wp-wiki-tooltip-comm.php
 
